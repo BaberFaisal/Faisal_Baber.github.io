@@ -1,4 +1,4 @@
-# Faisal Baber – Data Science Portfolio
+# Data Science Portfolio
 
 Welcome to my personal data science portfolio website!  
 This site is built with **Jekyll** and hosted on **GitHub Pages** to showcase my projects, skills, and professional journey in the field of data science.
@@ -44,4 +44,4 @@ This portfolio is deployed using:
 
 ---
 
-> ✨ Feel free to explore the projects and connect with me for collaborations or opportunities.
+Feel free to explore the projects and connect with me for collaborations or opportunities.
