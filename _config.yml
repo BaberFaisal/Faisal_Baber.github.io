@@ -1,20 +1,20 @@
 #-------------------------------
 # General Site Settings
-title: Wint Thandar Oo
-description: "Hi, I'm Wint! I'm a professional working in software technology. This is my professional portfolio showcasing a variety of projects/tutorials that I have done by following the courses or books. You can visit my Github & LinkedIn profiles or download my resume using the links."
+title: Faisal Baber
+description: "Hi, I'm Faisal! I'm a Master's student in Data Science. This is my professional portfolio showcasing my data science, machine learning, and analytics projects. You can visit my GitHub & LinkedIn profiles or download my resume using the links."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
 subtitle: Professional <span style="color:#f58506"> Portfolio </span>
-location: "Yangon, Myanmar"
-resume_url: /docs/Wint%20Thandar%20Oo%20Resume%202023.docx
+location: "Karachi, Pakistan"
+resume_url: /docs/Faisal_Baber_Resume.docx
 avatar_image: img/profile_picture.jpg
 #-------------------------------
 # Contact links
-linkedln: "https://www.linkedin.com/in/wintthandaroo/" # Add your linkedln handle
-github: "https://github.com/Wint-Thandar"  # Add your github handle
+linkedln: "linkedin.com/in/datascience-python-excel-tableau-expert" # Add your linkedln handle
+github:   "https://github.com/BaberFaisal"  # Add your github handle
 
 #-------------------------------
 # Build settings
@@ -50,9 +50,6 @@ toc:
  list_class: toc__list
  sublist_class: toc__sublist
  
-#-------------------------------
-# Google Analytics settings
- google_analytics: G-5Q5EYVF2FJ
  
 #-------------------------------
 # Exclude from processing.
