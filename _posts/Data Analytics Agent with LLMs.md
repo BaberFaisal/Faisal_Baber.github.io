@@ -10,7 +10,7 @@ The purpose of this project is to build a **data analytics agent** powered by LL
 This agent can analyze structured datasets, generate insights, and visualize results automatically from natural language queries.<br><br>
 
 ## Git Hub Repository Link.
-The source code for this project can be found at my [GitHub Repository](https://github.com/your-username/your-repo)<br><br>
+The source code for this project can be found at my [GitHub Repository](https://github.com/BaberFaisal/Building-a-Data-Analytics-Agent-using-LLMs)<br><br>
 
 In this project, we connect to the Groq LLM API, integrate it with PandasAI for dataframe analysis, and define a custom response handler to display charts.
 
@@ -79,6 +79,7 @@ agent.chat("Plot the distribution of salaries by job role")
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
 <br> This demonstrates how LLMs can be combined with data analysis libraries to create powerful AI-driven analytics tools.<br> ```
+
 
 
 
