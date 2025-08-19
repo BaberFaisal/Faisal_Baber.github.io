@@ -3,9 +3,9 @@ source "https://rubygems.org"
 # Jekyll itself
 gem "jekyll", "~> 4.4.1"
 
-# GitHub Pages environment (use this only if deploying to GitHub Pages)
-gem "github-pages", group: :jekyll_plugins
-
 group :jekyll_plugins do
   gem "webrick"   # Needed for Jekyll serve on Ruby 3+
 end
+
+# Uncomment if you want to match GitHub Pages exactly
+gem "github-pages", group: :jekyll_plugins
