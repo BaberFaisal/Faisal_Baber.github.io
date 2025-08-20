@@ -5,6 +5,7 @@ gem "jekyll", "~> 4.4.1"
 
 group :jekyll_plugins do
   gem "webrick"   # Needed for Jekyll serve on Ruby 3+
+  gem "wdm", ">= 0.1.0", platforms: [:mswin, :mingw, :x64_mingw]  # Needed on Windows
 end
 
 # Uncomment if you want to match GitHub Pages exactly
