@@ -36,10 +36,10 @@ sass:
 
 defaults:
   - scope:
-      path: ""   # apply to all posts
-      type: "posts"
+      path: ""   # empty means all files
+      type: posts
     values:
-      layout: "post"
+      layout: post
       read_time: true
       share: true
 
