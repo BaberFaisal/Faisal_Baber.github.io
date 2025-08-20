@@ -135,10 +135,8 @@ code.language-plaintext.highlighter-rouge {
 
 // Load custom font
 @font-face {
-  font-family: 'FuturaBT';
-  src: url('/assets/fonts/futura-medium-bt.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Futura";
+  src: url("/assets/fonts/futura-medium-bt.ttf") format("truetype");
 }
 
 body {
