@@ -35,11 +35,13 @@ sass:
 
 defaults:
   - scope:
-      type: posts
-      values:
-      layout: post
-      read_time: true
-      share: true
+      path: ""   # apply to all posts (or specify a subfolder like "_posts")
+      type: "posts"
+    values:
+      layout: "post"
+      read_time: true   # keep only if your theme uses this
+      share: true       # keep only if your theme uses this
+
 
 #-------------------------------
 # TOC settings
