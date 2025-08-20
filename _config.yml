@@ -3,18 +3,19 @@
 title: Faisal Baber
 description: "Hi, I'm Faisal! I'm a Master's student in Data Science. This is my professional portfolio showcasing my data science, machine learning, and analytics projects. You can visit my GitHub & LinkedIn profiles or download my resume using the links."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: ""     # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
 subtitle: Professional <span style="color:#f58506"> Portfolio </span>
 location: "Karachi, Pakistan"
 resume_url: /docs/Faisal_Baber_Resume.docx
-avatar_image: img/profile_picture.jpg
+avatar_image: img/profile_picture.jpg  # updated path to match typical Jekyll structure
+
 #-------------------------------
 # Contact links
-linkedln: "linkedin.com/in/datascience-python-excel-tableau-expert" # Add your linkedln handle
-github:   "https://github.com/BaberFaisal"  # Add your github handle
+linkedin: "https://linkedin.com/in/datascience-python-excel-tableau-expert" # fixed typo
+github: "https://github.com/BaberFaisal"
 
 #-------------------------------
 # Build settings
@@ -31,35 +32,32 @@ locale: en
 
 sass:
   sass_dir: _sass
-  style: compressed # possible values: nested expanded compact compressed
+  style: compressed
 
 defaults:
   - scope:
-      path: ""   # apply to all posts (or specify a subfolder like "_posts")
+      path: ""   # apply to all posts
       type: "posts"
     values:
       layout: "post"
-      read_time: true   # keep only if your theme uses this
-      share: true       # keep only if your theme uses this
-
+      read_time: true
+      share: true
 
 #-------------------------------
 # TOC settings
 toc:
- min_level: 1
- max_level: 3
- list_class: toc
- list_class: toc__list
- sublist_class: toc__sublist
- 
- 
+  min_level: 1
+  max_level: 3
+  list_class: toc__list
+  sublist_class: toc__sublist
+
 #-------------------------------
-# Exclude from processing.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
