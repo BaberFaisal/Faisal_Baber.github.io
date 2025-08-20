@@ -10,7 +10,7 @@ url: ""     # the base hostname & protocol for your site, e.g. http://example.co
 subtitle: Professional <span style="color:#f58506"> Portfolio </span>
 location: "Karachi, Pakistan"
 resume_url: /docs/Faisal_Baber_Resume.docx
-avatar_image: img/profile_picture.jpg  # updated path to match typical Jekyll structure
+avatar: /img/profile_picture.jpg  # updated path to match typical Jekyll structure
 
 #-------------------------------
 # Contact links
