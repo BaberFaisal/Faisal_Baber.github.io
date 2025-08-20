@@ -14,8 +14,8 @@ avatar_image: /img/profile_picture.jpg # updated path to match typical Jekyll st
 
 #-------------------------------
 # Contact links
-linkedin: "https://linkedin.com/in/datascience-python-excel-tableau-expert" # fixed typo
-github: "https://github.com/BaberFaisal"
+linkedin:  <a href="https://linkedin.com/in/datascience-python-excel-tableau-expert">LinkedIn</a>
+github:    "https://github.com/BaberFaisal"
 
 #-------------------------------
 # Build settings
