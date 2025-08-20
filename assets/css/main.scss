@@ -120,3 +120,27 @@ code.language-plaintext.highlighter-rouge {
 #toc a:hover {
  color: #9D174D;
 }
+// === Custom additions ===
+
+// Profile image styles
+.header-avatar-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  margin: 1rem auto;
+  display: block;
+}
+
+// Load custom font
+@font-face {
+  font-family: 'FuturaBT';
+  src: url('/assets/fonts/futura-medium-bt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'FuturaBT', Arial, sans-serif;
+}
