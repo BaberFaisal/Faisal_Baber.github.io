@@ -33,7 +33,6 @@ locale: en
 sass:
   sass_dir: _sass
   style: compressed
-
 defaults:
   - scope:
       path: ""   # empty means all files
