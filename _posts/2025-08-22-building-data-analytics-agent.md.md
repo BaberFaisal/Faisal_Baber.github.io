@@ -4,7 +4,6 @@ title: "Building a Data Analytics Agent using LLMs"
 image: /posts/llm-agent.jpg
 tags: [Python, LLM, LangChain, PandasAI, Data Analytics]
 ---
-
 ## Project Purpose  
 
 The purpose of this project is to build a **data analytics agent** powered by **LLMs** using **LangChain + Groq API**, **PandasAI**, and **Python**.  
@@ -85,3 +84,4 @@ agent.chat("Plot the distribution of salaries by job role")
 
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
+
