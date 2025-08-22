@@ -20,16 +20,18 @@ The source code for this project can be found at my [GitHub Repository](https://
 
 In this project, we connect to the Groq LLM API, integrate it with PandasAI for dataframe analysis, and define a custom response handler to display charts.  
 
+### Python Code
+
 ```python
 # Install required libraries
-!pip install --upgrade numpy
-!pip install --upgrade pandas
-!pip install langchain_groq --quiet
-!pip install pandasai --quiet
+pip install --upgrade numpy
+pip install --upgrade pandas
+pip install langchain_groq --quiet
+pip install pandasai --quiet
 
 # If needed, force reinstall
-!pip uninstall -y numpy pandas
-!pip install numpy pandas
+pip uninstall -y numpy pandas
+pip install numpy pandas
 
 # Load dataset
 import pandas as pd
@@ -77,6 +79,7 @@ agent = SmartDataframe(
         "response_parser": PandasDataFrame()
     }
 )
+
 # Example 1: Ask a question about the dataset
 agent.chat("What are the top 5 job titles in terms of average salary?")
 
