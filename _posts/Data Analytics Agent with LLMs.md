@@ -85,4 +85,3 @@ agent.chat("Plot the distribution of salaries by job role")
 
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
-
