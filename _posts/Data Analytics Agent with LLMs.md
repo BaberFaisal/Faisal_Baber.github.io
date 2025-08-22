@@ -1,10 +1,9 @@
 ---
 layout: post
-title: Building a Data Analytics Agent using LLMs
-image: "/posts/llm-agent.png"
+title: "Building a Data Analytics Agent using LLMs"
+image: /posts/llm-agent.jpg
 tags: [Python, LLM, LangChain, PandasAI, Data Analytics]
 ---
-
 ## Project Purpose
 The purpose of this project is to build a **data analytics agent** powered by LLMs using **LangChain + Groq API**, **PandasAI**, and **Python**.<br><br>
 This agent can analyze structured datasets, generate insights, and visualize results automatically from natural language queries.<br><br>
@@ -68,9 +67,7 @@ agent = SmartDataframe(
     }
 )
 <br> <br> Above setup allows you to query your dataset with natural language, and the agent will return results as text, tables, or plots.<br><br>
-
 Example usage:
-
 # Example 1: Ask a question about the dataset
 agent.chat("What are the top 5 job titles in terms of average salary?")
 
@@ -78,7 +75,8 @@ agent.chat("What are the top 5 job titles in terms of average salary?")
 agent.chat("Plot the distribution of salaries by job role")
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
-<br> This demonstrates how LLMs can be combined with data analysis libraries to create powerful AI-driven analytics tools.<br> ```
+<br> This demonstrates how LLMs can be combined with data analysis libraries to create powerful AI-driven analytics tools.<br>
+
 
 
 
