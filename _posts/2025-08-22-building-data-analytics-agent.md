@@ -20,9 +20,9 @@ The source code for this project can be found at my [GitHub Repository](https://
 
 In this project, we connect to the Groq LLM API, integrate it with PandasAI for dataframe analysis, and define a custom response handler to display charts.  
 
-### Python Code
+## Python Code
 
-```python
+{% highlight python %}
 # Install required libraries
 pip install --upgrade numpy
 pip install --upgrade pandas
@@ -46,7 +46,7 @@ import os
 from langchain_groq.chat_models import ChatGroq
 from google.colab import userdata
 
-os.environ["GROQ_API_KEY"] = userdata.get('key')
+os.environ["GROQ_API_KEY"] = userdata.get("key")
 llm = ChatGroq(model_name="qwen/qwen3-32b")
 
 # Custom Response Handler for PandasAI
@@ -88,3 +88,4 @@ agent.chat("Plot the distribution of salaries by job role")
 
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
+{% endhighlight %}
