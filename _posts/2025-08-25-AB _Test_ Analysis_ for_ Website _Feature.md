@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  A/B Test Analysis for Website Feature"
-image: /posts/ab-test.jpg
+title: "A/B Test Analysis for Website Feature"
+image: /img/posts/ab-test.jpg
 tags: [Python, Statistics, AB-Testing, Chi-Square, Data Science]
 ---
 
@@ -208,5 +208,6 @@ print("Cramer's V:", cramers_v)
 - Expected counts: Converted = 534.5, Not Converted = 4465.5 (per group)  
 - Cramér’s V = **0.0359** (small)  
 - Business uplift: +111 conversions (sample), +2,220 (100k users)  
+
 
 
