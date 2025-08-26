@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Data Analytics Agent using LLMs"
-image: /posts/llm-agent.jpg
+image: /img/posts/llm-agent.jpg
 tags: [Python, LLM, LangChain, PandasAI, Data Analytics]
 ---
 
@@ -89,3 +89,4 @@ agent.chat("Plot the distribution of salaries by job role")
 # Example 3: Count entries
 agent.chat("How many unique companies are listed in the dataset?")
 {% endhighlight %}
+
