@@ -56,7 +56,7 @@ We use statistical techniques — including the **Chi-Square Test for Independen
 
 ---
 
-![Conversion Rates by Group](/posts/ab-test/conversion_rates.png)  
+![Conversion Rates by Group](/img/posts/conversion_rates.png)  
 *Bar chart of conversion rates for Control vs Treatment groups.*  
 
 ---
@@ -77,7 +77,7 @@ We are testing whether **conversion rates differ between Control and Treatment g
 
 ---
 
-![Distribution of User Behavior](/posts/ab-test/distributions.png)  
+![Distribution of User Behavior](/img/posts/distributions.png)  
 *Distribution of PageViews, Clicks, and Converted users across groups.*  
 
 ---
@@ -141,7 +141,7 @@ print("Cramer's V:", cramers_v)
 
 ---
 
-![Chi-Square Test Visual](/posts/ab-test/chi_square.png)  
+![Chi-Square Test Visual](/img/posts/chi_square.png)  
 *Visualization of observed vs expected conversion counts.*  
 
 ---
@@ -169,7 +169,7 @@ print("Cramer's V:", cramers_v)
 
 ---
 
-![Confidence Interval of Uplift](/posts/ab-test/confidence_interval.png)  
+![Confidence Interval of Uplift](/img/posts/confidence_interval.png)  
 *95% confidence interval for conversion rate uplift.*  
 
 ---
@@ -195,7 +195,7 @@ print("Cramer's V:", cramers_v)
 
 ---
 
-![Power Analysis Curve](/posts/ab-test/power_curve.png)  
+![Power Analysis Curve](/img/posts/power_curve.png)  
 *Statistical power curve showing effect size vs detection probability.*  
 
 ---
@@ -208,3 +208,4 @@ print("Cramer's V:", cramers_v)
 - Expected counts: Converted = 534.5, Not Converted = 4465.5 (per group)  
 - Cramér’s V = **0.0359** (small)  
 - Business uplift: +111 conversions (sample), +2,220 (100k users)  
+
