@@ -186,10 +186,6 @@ Residual = idiosyncratic (stock-specific) noise.
 
 ---
 
-![PC Biplot Example](/img/posts/pca_biplot.png)  
-*Biplot showing sector loadings on PC1 and PC2.*  
-
----
 
 ## 07. Growth & Next Steps  
 
@@ -218,6 +214,7 @@ Residual = idiosyncratic (stock-specific) noise.
 ✅ Confirms PCA as a strong method for unveiling hidden risk factors in markets.  
 
 ---
+
 
 
 
