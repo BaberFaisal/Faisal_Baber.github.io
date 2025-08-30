@@ -127,35 +127,59 @@ Cumulative: **85%+ of sector return variance explained by first 3 PCs**.
 
 Shows eigenvalues in descending order. Sharp drop after PC2 → market is **2-factor dominant**.  
 
-### B — Cumulative Variance (`pca_cumulative_variance.png`)  
+### B — Cumulative Variance 
+![Cumulative Variance](/img/posts/pca_cumulative_variance.png) 
+
+
 By PC3, ~85% variance explained. Higher PCs add marginal noise only.  
 
-### C — PC Loadings Biplot (`pca_biplot.png`)  
+### C — PC Loadings Biplot 
+![PC Loadings Biplot](/img/posts/pca_biplot.png) 
+
+
 - PC1: all sectors aligned (systematic risk).  
 - PC2: divergence between **cyclical vs defensive sectors**.  
 - Interpretation: Market vs rotation tradeoff.  
 
-### D — Heatmap of Loadings (`pca_heatmap.png`)  
+### D — Heatmap of Loadings  
+![Heatmap of Loadings](/img/posts/pca_heatmap.png) 
+
+
 Clear contrast in loadings: Energy & Tech vs Staples & Utilities.  
 
-### E — Correlation Circle (`correlation_circle.png`)  
+### E — Correlation Circle  
+![Correlation Circle](/img/posts/correlation_circle.png) 
+
+
 Sectors close together = high correlation.  
 Defensives cluster together, cyclicals in another group.  
 
-### F — PC1 Time Series (`pc1_timeseries.png`)  
+### F — PC1 Time Series
+![PC1 Time Series](/img/posts/pc1_timeseries.png) 
+
+
 Tracks **overall market sentiment**.  
 Sharp negative spikes during 2008 & 2020 crises.  
 
-### G — PC2 Time Series (`pc2_timeseries.png`)  
+### G — PC2 Time Series  
+![PC2 Time Series](/img/posts/pc2_timeseries.png) 
+
+
 Captures **sector rotations**.  
 Oscillates between defensive and cyclical leadership.  
 
-### H — PC1 vs PC2 Scatter (`pc1_vs_pc2_scatter.png`)  
+### H — PC1 vs PC2 Scatter 
+
+![PC1 vs PC2 Scatter](/img/posts/pc1_vs_pc2_scatter.png) 
+
 Reveals orthogonal shocks:  
 - PC1 axis = systemic crashes.  
 - PC2 axis = rotation-driven divergences.  
 
-### I — Reconstruction (`reconstruction.png`)  
+### I — Reconstruction  
+![Reconstruction](/img/posts/reconstruction.png) 
+
+
 Actual vs reconstructed Tech ETF returns.  
 3 PCs almost fully replicate real returns.  
 Residual = idiosyncratic (stock-specific) noise.  
@@ -194,6 +218,7 @@ Residual = idiosyncratic (stock-specific) noise.
 ✅ Confirms PCA as a strong method for unveiling hidden risk factors in markets.  
 
 ---
+
 
 
 
