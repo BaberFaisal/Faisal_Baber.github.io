@@ -122,7 +122,8 @@ Cumulative: **85%+ of sector return variance explained by first 3 PCs**.
 
 ## 06. Plot Interpretations  
 
-### A — Scree Plot ('pca_scree.png')  
+### A — Scree Plot
+![Scree Plot](/img/posts/pca_scree.png) 
 Shows eigenvalues in descending order. Sharp drop after PC2 → market is **2-factor dominant**.  
 
 ### B — Cumulative Variance (`pca_cumulative_variance.png`)  
@@ -192,4 +193,5 @@ Residual = idiosyncratic (stock-specific) noise.
 ✅ Confirms PCA as a strong method for unveiling hidden risk factors in markets.  
 
 ---
+
 
