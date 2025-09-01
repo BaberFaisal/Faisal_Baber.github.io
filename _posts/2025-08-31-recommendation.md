@@ -198,7 +198,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### A — Target Distribution  
 
-![Target Distribution](/img/posts/fig_target_distribution.jpg)  
+![Target Distribution](/img/posts/fig_target_distribution.png)  
 *Shows the balance of target classes (0 = not reordered, 1 = reordered).*  
 
 **Insight:** Skewed toward 0 → confirms class imbalance problem.  
@@ -207,7 +207,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### B — Correlation Heatmap  
 
-![Feature Correlation Heatmap](/img/posts/fig_feature_correlation.jpg)  
+![Feature Correlation Heatmap](/img/posts/fig_feature_correlation.png)  
 *Pairwise correlations among engineered features.*  
 
 **Insight:** Recency and frequency features correlate, but not perfectly → useful complementarity.  
@@ -216,7 +216,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### C — Confusion Matrix  
 
-![Confusion Matrix](/img/posts/fig_confusion_matrix.jpg)  
+![Confusion Matrix](/img/posts/fig_confusion_matrix.png)  
 *Predicted vs actual counts.*  
 
 **Insight:** Many true negatives, but false negatives show missed reorders.  
@@ -226,7 +226,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### D — Classification Report  
 
-![Classification Report](/img/posts/fig_classification_report.jpg)  
+![Classification Report](/img/posts/fig_classification_report.png)  
 *Precision, recall, and F1-score per class.*  
 
 **Insight:** Positive class (reordered) typically lower precision but higher recall.  
@@ -235,7 +235,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### E — ROC Curve  
 
-![ROC Curve](/img/posts/fig_roc_curve.jpg)  
+![ROC Curve](/img/posts/fig_roc_curve.png)  
 *True Positive Rate vs False Positive Rate across thresholds.*  
 
 **Insight:** High AUC (>0.85 in runs) → model distinguishes reorders well.  
@@ -244,7 +244,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### F — Precision@K  
 
-![Precision at K](/img/posts/fig_precision_at_k.jpg)  
+![Precision at K](/img/posts/fig_precision_at_k.png)  
 *Fraction of correct recommendations in the Top-K list.*  
 
 **Insight:** Precision falls as K grows; at K=10, still strong.  
@@ -253,7 +253,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### G — Recall@K  
 
-![Recall at K](/img/posts/fig_recall_at_k.jpg)  
+![Recall at K](/img/posts/fig_recall_at_k.png)  
 *Fraction of actual reorders captured in the Top-K list.*  
 
 **Insight:** Recall improves with K; most staples covered by Top-15.  
@@ -262,7 +262,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### H — MAP@K  
 
-![MAP at K](/img/posts/fig_map_at_k.jpg)  
+![MAP at K](/img/posts/fig_map_at_k.png)  
 *Ranking quality (higher when correct items appear earlier).*  
 
 **Insight:** Good MAP indicates effective ordering, not just set membership.  
@@ -271,7 +271,7 @@ Upload each plot as a `.jpg` file into `img/posts/` on GitHub and link them here
 
 ### I — Feature Importances  
 
-![Feature Importances](/img/posts/fig_feature_importance.jpg)  
+![Feature Importances](/img/posts/fig_feature_importance.png)  
 *Gain importance of features in LightGBM.*  
 
 **Insight:** Recency (`up_orders_since_last`) and frequency (`up_order_count`) dominate;  
@@ -281,7 +281,7 @@ product reorder rate also strong.
 
 ### J — Example User Recommendations  
 
-![Example User Recommendations](/img/posts/fig_user_recommendations.jpg)  
+![Example User Recommendations](/img/posts/fig_user_recommendations.png)  
 *Top-10 predicted reorders with probabilities.*  
 
 **Insight:** Items include both high-frequency staples and recent favorites.  
@@ -296,4 +296,5 @@ product reorder rate also strong.
 - **Sequence models**: test RNNs or Transformers on order sequences.  
 - **Diversification**: ensure recommendations balance staples with exploratory items.  
 - **Online A/B Testing**: measure uplift in order size and repeat rate.  
+
 - **Monitoring**: drift detection on feature distributions and reorder probabilities.
