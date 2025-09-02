@@ -10,7 +10,7 @@ tags: [Python, Finance, PCA, Statistics, Data Science]
 The purpose of this project is to analyze **sector-level returns in global markets** using **Principal Component Analysis (PCA)**.  
 The goal is to identify hidden risk factors, reduce dimensionality, and provide actionable insights into **systematic shocks** and **sector rotations** that drive asset price movements.  
 
-We use PCA to:  
+I use PCA to:  
 - Extract **common market factors**.  
 - Quantify **variance explained** by leading components.  
 - Visualize **loadings, scores, and rotations**.  
@@ -26,7 +26,7 @@ We use PCA to:
   - Actions  
   - Results & Discussion  
 - Data Overview  
-- PCA Overview  
+- Core Concepts in PCA Market Risk Analysis  
 - Data Preparation  
 - Fitting PCA  
 - Analysis of Explained Variance  
@@ -56,7 +56,7 @@ We use PCA to:
 - Just **3 PCs explain ~85% of total variance**.  
 - Reconstruction of sector returns using first 3 PCs is highly accurate.  
 
-✅ **Conclusion:** Global sector markets can be reduced to a few interpretable drivers, enabling more effective **risk management and portfolio design**.  
+**Conclusion:** Global sector markets can be reduced to a few interpretable drivers, enabling more effective **risk management and portfolio design**.  
 
 ---
 
@@ -76,14 +76,90 @@ We use PCA to:
 
 ---
 
-## 02. PCA Overview  
+## 02. Core Concepts in PCA Market Risk Analysis
 
-**Principal Component Analysis (PCA)**:  
-- Linear technique to transform correlated variables into uncorrelated components.  
-- First components explain the maximum possible variance.  
-- Interpretation in finance: PCs ≈ hidden **risk factors**.  
+## 1. Principal Component Analysis (PCA)
+A statistical technique that reduces the dimensionality of a dataset by transforming correlated variables into a smaller set of uncorrelated variables (principal components). Each component captures a decreasing share of total variance.
 
----
+
+
+## 2. Principal Components (PCs)
+New variables created by PCA, formed as linear combinations of the original data.  
+- **PC1** explains the largest amount of variance.  
+- **PC2** explains the next largest, orthogonal to PC1.  
+- Subsequent PCs explain progressively smaller amounts.
+
+
+
+## 3. Variance Explained
+The proportion of total data variability accounted for by a principal component. High variance explained means the component captures strong common patterns in the data.
+
+
+
+## 4. Scree Plot
+A graph of the variance explained by each principal component. It helps determine how many components are sufficient to summarize the dataset.
+
+
+
+## 5. Loadings
+The coefficients (weights) that describe how much each original variable contributes to a principal component. High absolute values indicate stronger influence on that component.
+
+
+
+## 6. Scores
+The transformed values of the data expressed in the new principal component space. They show how each observation projects onto the components.
+
+
+
+## 7. Biplot
+A two-dimensional plot showing both the scores (observations) and loadings (variables) in the same space. It helps visualize relationships between variables and components.
+
+
+
+## 8. Correlation Circle (Loading Plot)
+A graphical representation of variable correlations with the first two principal components. Variables closer to the unit circle are better represented; opposing directions suggest negative correlation.
+
+
+
+## 9. Factor Rotation
+A transformation of principal components (e.g., varimax rotation) to make loadings easier to interpret. Rotated factors often align more clearly with economic or sector themes.
+
+
+
+## 10. Reconstruction
+The process of rebuilding original data using only a subset of principal components. If few PCs can closely reproduce the data, it shows strong underlying factor structure.
+
+
+
+## 11. Common Market Factor
+The dominant driver (often PC1) that captures broad, systemic co-movement across all sectors or assets — essentially the “global market risk.”
+
+
+
+## 12. Sector Rotation Factor
+A component (often PC2) that distinguishes between cyclical (growth-sensitive) and defensive (stable) sectors, capturing leadership shifts across economic cycles.
+
+
+
+## 13. Systemic Risk
+The risk that affects the entire financial market or system, not diversifiable by holding a portfolio. PCA often identifies systemic risk in PC1.
+
+
+
+## 14. Idiosyncratic Risk
+Risk specific to an individual asset or sector, uncorrelated with broader market factors. Usually captured in residual variance after PCA.
+
+
+
+## 15. Hedging
+A portfolio management strategy that reduces exposure to unwanted risk factors (e.g., by offsetting PC1 exposure with index futures).
+
+
+
+## 16. Factor Investing
+An investment approach that allocates based on exposures to underlying factors (e.g., tilting toward cyclical sectors if PC2 leadership is expected).
+
+
 
 ## 03. Data Preparation  
 
@@ -91,7 +167,7 @@ We use PCA to:
 - Standardized each sector series.  
 - Checked missing values, outliers, and ensured numerical stability.  
 
-✅ Final dataset ready for PCA: mean = 0, variance = 1.  
+Final dataset ready for PCA: mean = 0, variance = 1.  
 
 ---
 
@@ -122,67 +198,77 @@ Cumulative: **85%+ of sector return variance explained by first 3 PCs**.
 
 ## 06. Plot Interpretations  
 
-### A — Scree Plot
+### Scree Plot
 ![Scree Plot](/img/posts/pca_scree.png) 
 
-Shows eigenvalues in descending order. Sharp drop after PC2 → market is **2-factor dominant**.  
+Global equity market returns are largely driven by one dominant factor (broad market/systemic risk), with a secondary sector-rotation factor and small tertiary influences. Beyond 3 PCs, marginal explanatory power is negligible. 
 
-### B — Cumulative Variance 
+### Cumulative Variance 
 ![Cumulative Variance](/img/posts/pca_cumulative_variance.png) 
 
 
 By PC3, ~85% variance explained. Higher PCs add marginal noise only.  
 
-### C — PC Loadings Biplot 
+### PC Loadings Biplot 
 ![PC Loadings Biplot](/img/posts/pca_biplot.png) 
 
 
-- PC1: all sectors aligned (systematic risk).  
-- PC2: divergence between **cyclical vs defensive sectors**.  
-- Interpretation: Market vs rotation tradeoff.  
+- All sectors have strong positive PC1 loadings → confirming the common market factor.
 
-### D — Heatmap of Loadings  
+- Along PC2, cyclical sectors (Tech, Industrials, Financials) load positively, while defensive sectors (Utilities, Staples) load negatively → PC2 represents a cyclical-vs-defensive rotation.
+
+### Heatmap of Loadings  
 ![Heatmap of Loadings](/img/posts/pca_heatmap.png) 
 
 
-Clear contrast in loadings: Energy & Tech vs Staples & Utilities.  
+- PC1: uniformly high positive loadings (systemic market risk).
 
-### E — Correlation Circle  
+- PC2: clear split between cyclical vs defensive.
+
+- PC3/PC4: weaker, possibly capturing sector-specific anomalies (e.g., energy shocks, commodity-driven moves).
+
+### Correlation Circle  
 ![Correlation Circle](/img/posts/correlation_circle.png) 
 
 
-Sectors close together = high correlation.  
-Defensives cluster together, cyclicals in another group.  
+- Confirms systemic alignment along PC1.
 
-### F — PC1 Time Series
+- Opposite quadrants show sector opposition (e.g., Tech vs Utilities).
+
+- Clear visualization of how sectors move relative to each other in factor space.
+
+### PC1 Time Series
 ![PC1 Time Series](/img/posts/pc1_timeseries.png) 
 
 
-Tracks **overall market sentiment**.  
-Sharp negative spikes during 2008 & 2020 crises.  
+PC1 behaves like a market-wide risk index (akin to a synthetic “market return”). Spikes/drops align with major crises, showing it captures systemic shocks. 
 
-### G — PC2 Time Series  
+### PC2 Time Series  
 ![PC2 Time Series](/img/posts/pc2_timeseries.png) 
 
 
 Captures **sector rotations**.  
 Oscillates between defensive and cyclical leadership.  
 
-### H — PC1 vs PC2 Scatter 
+### PC1 vs PC2 Scatter 
 
 ![PC1 vs PC2 Scatter](/img/posts/pc1_vs_pc2_scatter.png) 
 
-Reveals orthogonal shocks:  
-- PC1 axis = systemic crashes.  
-- PC2 axis = rotation-driven divergences.  
+- Data clusters around the origin, with large deviations during crisis periods.
 
-### I — Reconstruction  
+- PC1 (horizontal axis) dominates → broad market crises.
+
+- PC2 (vertical axis) swings during sector-rotation phases (growth vs defensives leadership shifts).
+
+### Reconstruction  
 ![Reconstruction](/img/posts/reconstruction.png) 
 
 
-Actual vs reconstructed Tech ETF returns.  
-3 PCs almost fully replicate real returns.  
-Residual = idiosyncratic (stock-specific) noise.  
+- The reconstructed series tracks the original closely.
+
+- Error is small (<5%), proving that a small set of latent factors fully captures sector return dynamics.
+
+- Implies dimensionality reduction is effective for risk monitoring and portfolio replication.
 
 ---
 
@@ -211,9 +297,10 @@ Residual = idiosyncratic (stock-specific) noise.
 - Cumulative ≈ 85%+ with 3 PCs  
 - Reconstruction error minimal (<5%)  
 
-✅ Confirms PCA as a strong method for unveiling hidden risk factors in markets.  
+
 
 ---
+
 
 
 
