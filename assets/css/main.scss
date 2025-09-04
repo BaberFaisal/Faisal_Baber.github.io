@@ -29,116 +29,169 @@
 // 5-TRUMPS
 @import "5-trumps/helpers";
 
-// added
-pre.highlight {
-    padding: 8px 12px;
-    position: relative;
-  
-    // override skeleton styles
-    > code {
-      border: 0;
-      overflow-x: auto;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  
-    &.highlight {
-      overflow: auto;
-      white-space: pre;
-      word-wrap: normal;
-	  border-radius: 4px;
-  
-      &,
-      code {
-        background-color: #263238;
-        font-size: 14px;
-      }
-    }
-  
-    // copy code to clipboard
-    .copy {
-      color: #0a0a0a;
-      position: absolute;
-      right: 1.2rem;
-      top: 0.8rem;
-      opacity: 0;
-	  border-style: outset;
-	  border-color: silver;
-	  border-radius: 4px;
-	  padding-right: 10px;
-      padding-left: 10px;
-	  padding-top: 3px;
-      padding-bottom: 3px;
-  
-      &:active,
-      &:focus,
-      &:hover {
-        background: #ffffff;
-        opacity: 1;
-      }
-    }
-  
-    &:active .copy,
-    &:focus .copy,
-    &:hover .copy {
-      background: #ffffff;
-      opacity: 1;
-    }
-  } 
-  
-code.language-plaintext.highlighter-rouge {
-    background: darkslategrey;
-}
- 
- .toc__list:before {
- content: "Table Of Contents";
- font-weight: bold;
- font-size: 1.5rem;
+// === Custom Global Styles ===
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap');
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #0f172a; // dark slate background
+  color: #e2e8f0; // light gray text
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
 }
 
-.toc__list {
- border: 2px solid #eee;
- border-radius: 4px;
- line-height: 1.8rem;
- padding: 1rem 1.5rem;
- font-weight: 600;
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #38b2ac; // teal accent
+  margin-bottom: 0.5rem;
 }
 
-.toc__sublist li {
- padding-left: 1.25rem;
+// Links
+a {
+  color: #38b2ac;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #9d174d; // rose highlight
+  }
 }
 
-.toc-h2:first-child {
- margin-top: 1rem;
-}  
-
-#toc a {
- color: darkseagreen;
- text-decoration: underline;
+// Navbar / Header
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.95); // dark with transparency
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
 }
 
-#toc a:hover {
- color: #9D174D;
-}
-// === Custom additions ===
-
-// Profile image styles
+// Profile Image
 .header-avatar-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #ccc;
+  border: 3px solid #38b2ac;
   margin: 1rem auto;
   display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
-// Load custom font
-@font-face {
-  font-family: "Futura";
-  src: url("/assets/fonts/futura-medium-bt.ttf") format("truetype");
+// Project Cards
+.project-card {
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  }
+
+  img {
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
 }
 
-body {
-  font-family: 'FuturaBT', Arial, sans-serif;
+// Buttons
+.btn, button {
+  background: #38b2ac;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #2c7a7b;
+  }
+}
+
+// Code Blocks
+pre.highlight {
+  padding: 1rem;
+  border-radius: 6px;
+  background: #1e293b;
+  overflow-x: auto;
+  font-family: 'Roboto Mono', monospace;
+
+  code {
+    background: none;
+    color: #f8fafc;
+    font-size: 0.9rem;
+  }
+
+  .copy {
+    color: #0a0a0a;
+    position: absolute;
+    right: 1.2rem;
+    top: 0.8rem;
+    opacity: 0;
+    border-radius: 4px;
+    padding: 3px 10px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      background: #38b2ac;
+      color: #fff;
+    }
+  }
+
+  &:hover .copy {
+    opacity: 1;
+  }
+}
+
+// Table of Contents
+.toc__list:before {
+  content: "Table Of Contents";
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.toc__list {
+  border: 2px solid #334155;
+  border-radius: 6px;
+  line-height: 1.8rem;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  background: #1e293b;
+}
+
+.toc__sublist li {
+  padding-left: 1.25rem;
+}
+
+#toc a {
+  color: #38b2ac;
+  text-decoration: underline;
+}
+
+#toc a:hover {
+  color: #9d174d;
 }
