@@ -156,3 +156,10 @@ code.language-plaintext.highlighter-rouge {
 body {
   font-family: 'FuturaBT', Arial, sans-serif;
 }
+/* Remove extra circle from wrapper link */
+.header-avatar {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: inline-block; /* keeps layout neat */
+}
