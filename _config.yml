@@ -2,8 +2,8 @@
 # General Site Settings
 title: Faisal Baber
 description: "Hi, I'm Faisal! I'm a Master's student in Data Science. This is my professional portfolio showcasing my data science, machine learning, and analytics projects. You can visit my GitHub & LinkedIn profiles or download my resume using the links."
-url: "https://baberfaisal.github.io"
-baseurl: "/Faisal_Baber.github.io"
+url: "https://faisal-baber.github.io"
+baseurl: ""
 
 
 #-------------------------------
@@ -60,4 +60,5 @@ toc:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
