@@ -29,6 +29,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-toc
+  - jekyll-feed
 
 paginate: 6
 paginate_path: "/page/:num"
@@ -54,3 +55,4 @@ toc:
   list_class: toc
   list_class: toc__list
   sublist_class: toc__sublist
+
