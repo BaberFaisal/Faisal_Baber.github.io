@@ -1,67 +1,96 @@
 ---
 layout: default
 ---
+
+<!-- Post Image -->
 <div class="container">
-    <div class="row">
-        <div class="col col-12">
-            <div class="post-image-box">
-                <!-- Fixed post image path -->
-                <div class="post-image" style="background-image: url('https://baberfaisal.github.io/Faisal_Baber.github.io/img/{{ page.image }}')"></div>
-            </div>
+  <div class="row">
+    <div class="col col-12">
+      <div class="post-image-box">
+        <div class="post-image" 
+             style="background-image: url({{ "/img/" | prepend: site.baseurl | append: page.image }})">
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
+<!-- Post Content -->
 <div class="container">
-    <div class="row">
-        <article class="col col-12 col-t-12 post">
-            <div class="post-content">
-                <div class="post-head">
-                    {% if page.tags.size >= 1 %}
-                    <div class="post-tag">
-                        {% for tag in page.tags %}
-                        <a href="https://baberfaisal.github.io/Faisal_Baber.github.io/tags#{{tag}}" class="tag">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    <h1 class="post-title">{{ page.title | escape }}</h1>
-                    <div class="post-info">
-                        <div class="post-time">
-                            <span class="page__meta"><i class="ion ion-md-time"></i>{% include read-time.html content=content %}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-body">
-                    {{ content | toc }}
+  <div class="row">
+    <article class="col col-12 col-t-12 post">
+      <div class="post-content">
 
-                    {% if page.share %}{% include social-share.html %}{% endif %}
-					
-                    <!-- Fixed JS path -->
-					<script src="https://baberfaisal.github.io/Faisal_Baber.github.io/assets/js/codebutton.js"></script>
-
-                </div>
-                {% if page.previous.url or page.next.url %}
-                <div class="post-navigation">
-                    {% if page.previous.url %}
-                    <a href="https://baberfaisal.github.io/Faisal_Baber.github.io{{page.previous.url}}" class="prev">
-                        <div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Previous </div>
-                    </a>
-                    {% else %}
-                    <a href="#" class="prev disabled">
-                        <div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Previous </div>
-                    </a>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <a href="https://baberfaisal.github.io/Faisal_Baber.github.io{{page.next.url}}" class="next">
-                        <div class="post-nav-arrow">Next <i class="ion ion-ios-arrow-round-forward"></i></div>
-                    </a>
-                    {% else %}
-                    <a href="#" class="next disabled">
-                        <div class="post-nav-arrow">Next <i class="ion ion-ios-arrow-round-forward"></i></div>
-                    </a>
-                    {% endif %}
-                </div>
-                {% endif %}
+        <!-- Post Header -->
+        <div class="post-head">
+          {% if page.tags.size >= 1 %}
+            <div class="post-tag">
+              {% for tag in page.tags %}
+                <a href="{{ site.baseurl }}/tags#{{ tag }}" class="tag">{{ tag }}</a>
+              {% endfor %}
             </div>
-        </article> <!-- /.post -->
-    </div>
+          {% endif %}
+
+          <h1 class="post-title">{{ page.title | escape }}</h1>
+
+          <div class="post-info">
+            <div class="post-time">
+              <span class="page__meta">
+                <i class="ion ion-md-time"></i>
+                {% include read-time.html content=content %}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Body -->
+        <div class="post-body">
+          {{ content | toc }}
+
+          {% if page.share %}
+            {% include social-share.html %}
+          {% endif %}
+
+          <script src="/assets/js/codebutton.js"></script>
+        </div>
+
+        <!-- Post Navigation -->
+        {% if page.previous.url or page.next.url %}
+          <div class="post-navigation">
+
+            {% if page.previous.url %}
+              <a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev">
+                <div class="post-nav-arrow">
+                  <i class="ion ion-ios-arrow-round-back"></i> Previous
+                </div>
+              </a>
+            {% else %}
+              <a href="#" class="prev disabled">
+                <div class="post-nav-arrow">
+                  <i class="ion ion-ios-arrow-round-back"></i> Previous
+                </div>
+              </a>
+            {% endif %}
+
+            {% if page.next.url %}
+              <a href="{{ site.baseurl }}{{ page.next.url }}" class="next">
+                <div class="post-nav-arrow">
+                  Next <i class="ion ion-ios-arrow-round-forward"></i>
+                </div>
+              </a>
+            {% else %}
+              <a href="#" class="next disabled">
+                <div class="post-nav-arrow">
+                  Next <i class="ion ion-ios-arrow-round-forward"></i>
+                </div>
+              </a>
+            {% endif %}
+
+          </div>
+        {% endif %}
+
+      </div>
+    </article>
+    <!-- /.post -->
+  </div>
 </div>
