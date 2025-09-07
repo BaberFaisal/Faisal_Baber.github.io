@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="container">
-    <div class="row">
-        <div class="col col-12 col-t-12">
-            <div class="row">
-                {% for post in paginator.posts %}
-                    {% include post-card.html %}
-                {% endfor %}
-            </div>
-            {% include pagination.html %}
-        </div>
+  <div class="row">
+    <div class="col col-12 col-t-12">
+      <div class="row">
+        {% for post in paginator.posts %}
+          {% include post-card.html %}
+        {% endfor %}
+      </div>
+      {% include pagination.html %}
     </div>
+  </div>
 </div>
 
 <!-- Contact Modal -->
@@ -98,4 +98,3 @@ window.onclick = function(event) {
   }
 }
 </script>
-<head> <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> </head>
