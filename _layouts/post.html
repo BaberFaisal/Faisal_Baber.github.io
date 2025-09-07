@@ -5,7 +5,8 @@ layout: default
     <div class="row">
         <div class="col col-12">
             <div class="post-image-box">
-                <div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+                <!-- Fixed post image path -->
+                <div class="post-image" style="background-image: url('https://baberfaisal.github.io/Faisal_Baber.github.io/img/{{ page.image }}')"></div>
             </div>
         </div>
     </div>
@@ -18,7 +19,7 @@ layout: default
                     {% if page.tags.size >= 1 %}
                     <div class="post-tag">
                         {% for tag in page.tags %}
-                        <a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
+                        <a href="https://baberfaisal.github.io/Faisal_Baber.github.io/tags#{{tag}}" class="tag">{{ tag }}</a>
                         {% endfor %}
                     </div>
                     {% endif %}
@@ -34,13 +35,14 @@ layout: default
 
                     {% if page.share %}{% include social-share.html %}{% endif %}
 					
-					<script src="/assets/js/codebutton.js"></script>
+                    <!-- Fixed JS path -->
+					<script src="https://baberfaisal.github.io/Faisal_Baber.github.io/assets/js/codebutton.js"></script>
 
                 </div>
                 {% if page.previous.url or page.next.url %}
                 <div class="post-navigation">
                     {% if page.previous.url %}
-                    <a href="{{ site.baseurl }}{{page.previous.url}}" class="prev">
+                    <a href="https://baberfaisal.github.io/Faisal_Baber.github.io{{page.previous.url}}" class="prev">
                         <div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Previous </div>
                     </a>
                     {% else %}
@@ -49,7 +51,7 @@ layout: default
                     </a>
                     {% endif %}
                     {% if page.next.url %}
-                    <a href="{{ site.baseurl }}{{page.next.url}}" class="next">
+                    <a href="https://baberfaisal.github.io/Faisal_Baber.github.io{{page.next.url}}" class="next">
                         <div class="post-nav-arrow">Next <i class="ion ion-ios-arrow-round-forward"></i></div>
                     </a>
                     {% else %}
