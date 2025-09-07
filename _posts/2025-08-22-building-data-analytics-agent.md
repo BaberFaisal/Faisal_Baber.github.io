@@ -100,7 +100,7 @@ agent.chat("show the best paying companies in table form")
 {% highlight python %}
 agent.chat("What are the top 5 job titles with the highest salaries?")
 {% endhighlight %}
-![top_5](/img/posts/top_5.png) 
+![top_5]({{ site.baseurl }}/img/posts/top_5.png) 
 
 ## Concept Overview  
 
@@ -210,6 +210,7 @@ Post-retrieval reordering using a stronger model (often a cross-encoder) to boos
 
 - Costs more latency  
 - Raises the chance that injected passages truly support the answer  
+
 
 
 
