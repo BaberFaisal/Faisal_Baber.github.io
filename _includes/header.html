@@ -5,8 +5,8 @@
 				<div class="header-box">
 					<div class="col col-3 wd-mob">
 						{% if site.avatar_image %}
-						<a href="https://baberfaisal.github.io/Faisal_Baber.github.io/" class="header-avatar">
-							<img src="https://baberfaisal.github.io/Faisal_Baber.github.io/{{ site.avatar_image }}" class="header-avatar-img" alt="{{ site.title }}">
+						<a href="{{ "/" | relative_url }}" class="header-avatar">
+							<img src="{{ site.avatar_image | relative_url }}" class="header-avatar-img" alt="{{ site.title }}">
 						</a>
 						{% endif %}
 					</div>
