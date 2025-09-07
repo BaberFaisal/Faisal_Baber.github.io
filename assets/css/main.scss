@@ -1,3 +1,4 @@
+
 ---
 ---
 
@@ -6,6 +7,8 @@
 // ==============================
 @import "0-settings/global";
 @import "0-settings/colors";
+
+
 // ==============================
 // 1-TOOLS
 // ==============================
@@ -64,8 +67,7 @@ pre.highlight {
     word-wrap: normal;
     border-radius: 4px;
 
-    &,
-    code {
+    &, code {
       background-color: #263238;
       font-size: 14px;
     }
@@ -155,6 +157,7 @@ code.language-plaintext.highlighter-rouge {
 body {
   font-family: 'FuturaBT', Arial, sans-serif;
 }
+
 /* Remove extra circle from wrapper link */
 .header-avatar {
   border: none !important;
