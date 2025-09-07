@@ -2,24 +2,20 @@
 # General Site Settings
 title: Faisal Baber
 description: "Hi, I'm Faisal! I'm a Master's student in Data Science. This is my professional portfolio showcasing my data science, machine learning, and analytics projects. You can visit my GitHub & LinkedIn profiles or download my resume using the links."
-
-# The main site URL (no trailing slash)
-url: "https://baberfaisal.github.io"
-
-# For user/organization GitHub Pages sites, baseurl must be empty
-baseurl: ""
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""     # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
 subtitle: Professional <span style="color:#f58506"> Portfolio </span>
 location: "Karachi, Pakistan"
-resume_url: "/docs/Faisal_Baber_Resume.docx"
-avatar_image: "/img/profile_picture.jpg"
+resume_url: /docs/Faisal_Baber_Resume.docx
+avatar_image: img/profile_picture.jpg
 
 #-------------------------------
 # Contact links
 linkedin: "https://www.linkedin.com/in/faisalbaber-datascience/"
-github:   "https://github.com/BaberFaisal"
+github: "https://github.com/BaberFaisal"
 
 #-------------------------------
 # Build settings
@@ -29,29 +25,37 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-toc
-  - jekyll-feed
-
 paginate: 6
 paginate_path: "/page/:num"
 locale: en
 
 sass:
   sass_dir: _sass
-  style: compressed
+  style: compressed # possible values: nested expanded compact compressed
 
 defaults:
   - scope:
       type: posts
-      values:
-        layout: post
-        read_time: true
-        share: true
+    values:
+      layout: post
+      read_time: true
+      share: true
 
 #-------------------------------
 # TOC settings
 toc:
   min_level: 1
   max_level: 3
-  list_class: toc
   list_class: toc__list
   sublist_class: toc__sublist
+
+#-------------------------------
+# Exclude from processing.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
