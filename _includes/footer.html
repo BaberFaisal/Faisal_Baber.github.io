@@ -4,7 +4,7 @@
             <div class="col col-12">
                 <div class="footer-top">
                     <h2 class="logo-title">
-                        <a href="{{ "/" | relative_url }}" class="logo-text">{{ site.title }}</a>
+                        <a href="https://baberfaisal.github.io/Faisal_Baber.github.io/" class="logo-text">{{ site.title }}</a>
                     </h2>
                     <div class="top"><i class="ion ion-ios-arrow-up"></i></div>
                 </div>
@@ -14,9 +14,17 @@
                     </div>
                     <div class="footer-social">
                         <ul class="list-reset">
-                            {% if site.github %}<li><a href="{{ site.github }}"><i class="ion ion-logo-github"></i> Github</a></li>{% endif %}
-                            {% if site.linkedln %}<li><a href="{{ site.linkedln }}"><i class="ion ion-logo-linkedin"></i> Linkedln</a></li>{% endif %}
-                            <li><a href="{{ "/feed.xml" | relative_url }}"><i class="ion ion-logo-rss"></i> Feed</a></li>
+                            {% if site.github %}
+                                <li><a href="{{ site.github }}"><i class="ion ion-logo-github"></i> Github</a></li>
+                            {% endif %}
+                            {% if site.linkedin %}
+                                <li><a href="{{ site.linkedin }}"><i class="ion ion-logo-linkedin"></i> LinkedIn</a></li>
+                            {% endif %}
+                            <li>
+                                <a href="https://baberfaisal.github.io/Faisal_Baber.github.io/feed.xml">
+                                    <i class="ion ion-logo-rss"></i> Feed
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
